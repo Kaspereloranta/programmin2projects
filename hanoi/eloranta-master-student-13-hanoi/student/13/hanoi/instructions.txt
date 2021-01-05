@@ -1,0 +1,51 @@
+Ohjelma on graafisella käyttöliittymällä varustettu Hanoin torni -peli. Pelin
+kulku on yksinkertainen. Alussa tapissa A on n erikokoista kiekkoa päällekkäin
+suuruusjärjestyksessä. (Suurin on alimmaisena ja pienin on ylimmäisenä).
+Koodissa on määritelty vakio AMOUNT_OF_DISKS, jonka arvoa muuttamalla peli
+voidaan suorittaa eri määrillä kiekkoja. Pelaajan painaessa nappia, jossa
+lukee "Start Game" peli alkaa. Tällöin myös kiekkoja liikuttavat napit
+aktivoituvat pelaajan käyttöön. Napit ovat muotoa nimeltään muotoa
+esim. A->B, joka siirtää ylimmän kiekon tapista A tapin B päällimmäiseksi,
+mikäli tämä siirto on sääntöjen mukainen. Pelin tavoitteena on saada siirrettyä
+kaikki kiekot tankoon B samaan järjestykseen mitä ne ovat pelin alkaessa tanko A:ssa
+hyödyntäen aputankoa C. Tavoitteellinen kiekkojen järjestys on siis suurin
+alhaalla jne. Säännöt ovat yksinkertaiset. Pelaaja voi liikuttaa vain yhtä
+kiekkoa kerrrallaan ja kooltaan suurempi kiekko ei saa koskaan olla pienemmän
+kiekon päällä. Ns. laittomat siirrot pelissä on estetty koodissa. Mikäli pelaaja
+painaa siirtonappia, joka tuottaisi laittoman siirron toteutuessaan, mitään ei
+tapahdu. Tällöin ui:ssa olevaan textbrowseriin tulostetaan pelaajalle ilmoitus
+siitä, että hän yritti tehdä laitonta siirtoa. Kiekot voivat siis liikkua ainoastaan
+sallittujen siirtojen mukaisesti. Ohjelma sulkeutuu painaessa käyttöliittymässä
+olevaa Exit -nappia.
+
+Pelin päättyessä pelaajan voittoon pelaajalle tulostetaan ilmoitus siitä
+textBrowseriin.
+
+Olen toteuttanut ohjelmassa kaikki minimivaatimuksissa esitetyt vaatimukset.
+
+Olen lisäksi toteuttanut seuraavat lisäominaisuudet:
+
+- Jokaisella tapilla on eri väri, ja tapissa olevat kiekot ovat tapin värisiä.
+  kiekon väri siis muuttuu sitä siirrettäessä tapista toiseen.
+- Käyttöliittymässä on kaksi LCD Number -widgetiä jossa näytetään pelin aikana
+  siihen mennessä kulunut aika, toisessa minuutit, toisessa sekunnit.
+  Aika lähtee juoksemaan pelaajan painaessa Start Game -nappia.
+- Käyttöliittymässä on lisäksi kaksi muuta LCD Number -widgettiä, jossa
+  esitetään siihen mennessä paras suoritusaika, jolla peli on ratkaistu.
+- Pelin päättyessä pelaajan voittoon kiekkoja ei voi enää liikutella.
+  Pelialustan voi kuitenkin nollata painamalla Reset Board -nappia, jolla
+  pelialusta palautuu alkutilaan, jossa uuden pelin voi taas aloittaa painamalla
+  Start Game -nappia. Reset Board ei kuitenkaan nollaa tietoa aikaisemmasta
+  parhaasta suoritusajasta. Paras suoritusaika jää siis näkyviin ja pelaaja
+  voi yrittää päihittää sen uudella yrittämällä.
+- Pelaajan pelin aikana tekemät siirrot tulostuvat textBrowserMovementHistoryyn,
+  josta pelaaja voi pelin aikana tai sen päättyessä tarkastellea siirtohistoriaansa.
+  Siirtohistoria nollataan samalla kun nollataan muu pelialusta.
+- Lisätty näppäinkomennot kiekkojen liikutteluun. Näppäinkomennot ovat seuraavat:
+    - Painamalla pelin aikana nappia "1" liikutetan kiekkoa tapista A tappiin B.
+    - Painamalla pelin aikana nappia "Q" liikutetan kiekkoa tapista B tappiin A.
+    - Painamalla pelin aikana nappia "2" liikutetan kiekkoa tapista A tappiin C.
+    - Painamalla pelin aikana nappia "W" liikutetan kiekkoa tapista C tappiin A.
+    - Painamalla pelin aikana nappia "3" liikutetan kiekkoa tapista B tappiin C.
+    - Painamalla pelin aikana nappia "E" liikutetan kiekkoa tapista C tappiin B.
+    HUOM! Siirrot toteutuvat vain mikäli ne ovat pelin sääntöjen mukaisia.
