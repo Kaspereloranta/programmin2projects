@@ -5,7 +5,6 @@
  *  * TIE-0220x S2019
  * Name: Kasper Eloranta
  * E-mail: kasper.eloranta@tuni.fi
- * Student id: 274212
  *
  * */
 
