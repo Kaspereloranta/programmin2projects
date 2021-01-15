@@ -6,8 +6,6 @@
  * ones.
  * Program author
  * Name: Kasper Eloranta
- * Student number: 274212
- * UserID: eloranta
  * E-Mail: kasper.eloranta@tuni.fi
  *
  * */
